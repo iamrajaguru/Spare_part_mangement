@@ -1,38 +1,83 @@
-.App {
-  text-align: center;
+body {
+  background-color: #d0d0e2;
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
+.root {
+  height: 100vh;
   flex-direction: column;
+}
+
+.custom-card {
+  position: relative;
+  height: 200px;
+  width: 300px;
+  margin-top: 50px;
+  font-weight: 600;
+}
+
+#loc_icon {
+  font-size: 30px;
+
+}
+
+.btn-custom {
+  color: #fff;
+  background: #676798;
+  border: 2px solid #676798;
+  outline: 2px solid #fff;
+  outline-offset: -2px;
+  transition: outline-offset 250ms ease-in-out;
+
+
+}
+
+.head_text {
+  position: relative;
+  top: 0px;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-size: 40px;
+}
+
+.btn-custom:hover,
+.btn-custom:focus {
+  outline-offset: -6px;
+}
+
+.btn-clear {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+.model_container {
+  display: flex;
   align-items: center;
+  flex-direction: column;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  height: 200px;
+  width: 300px;
+  background-color: #ffffff;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
 }
 
-.App-link {
-  color: #61dafb;
+.fa-tools {
+  font-size: 50px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.model_container:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+.bg_car {
+
+  flex-grow: 1;
+  max-height: 30vh;
+  min-width: 30vw;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-image: url("full_car.png");
+  z-index: -1;
 }
